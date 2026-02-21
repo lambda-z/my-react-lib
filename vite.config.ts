@@ -12,7 +12,6 @@ export default defineConfig({
     lib: {
       entry: {
         index: resolve(__dirname, 'src/index.ts'),
-        client: resolve(__dirname, 'src/client.ts') // 可选：纯客户端导出
       },
       formats: ['es', 'cjs'],
       fileName: (format, entryName) =>

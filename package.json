@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc --emitDeclarationOnly",
+    "build": "vite build",
     "prepare": "npm run build"
   },
   "devDependencies": {
@@ -35,5 +35,10 @@
   },
   "dependencies": {
     "antd": "^6.3.0"
+  },
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "emitDeclarationOnly": true
   }
 }
