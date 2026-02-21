@@ -1,6 +1,6 @@
 {
   "name": "my-react-lib",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -17,11 +17,12 @@
   ],
   "peerDependencies": {
     "react": ">=18.3.1",
-    "react-dom": ">=18.3.1"
+    "react-dom": ">=18.3.1",
+    "antd": "^6.3.0"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npx tsc --noEmit false --declaration true --emitDeclarationOnly true",
     "prepare": "npm run build"
   },
   "devDependencies": {
@@ -32,13 +33,5 @@
     "typescript": "^5.9.3",
     "vite-plugin-dts": "^4.5.4",
     "antd": "^6.3.0"
-  },
-  "dependencies": {
-    "antd": "^6.3.0"
-  },
-  "compilerOptions": {
-    "composite": true,
-    "declaration": true,
-    "emitDeclarationOnly": true
   }
 }
