@@ -7,9 +7,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "files": [
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc --emitDeclarationOnly && vite build",
+    "build": "vite build && tsc --emitDeclarationOnly",
     "prepare": "npm run build"
   },
   "devDependencies": {
