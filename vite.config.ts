@@ -14,8 +14,11 @@ export default defineConfig({
         index: resolve(__dirname, 'src/index.ts'),
       },
       formats: ['es', 'cjs'],
-      fileName: (format, entryName) =>
-          `${entryName}.${format === 'es' ? 'js' : 'cjs'}`
+      fileName: (format) => {
+        if (format === 'es') return 'index.mjs'  // ESM → .mjs
+        if (format === 'cjs') return 'index.js'   // CJS → .js
+        return `index.${format}.js`
+      },
     },
     rollupOptions: {
       external: [
